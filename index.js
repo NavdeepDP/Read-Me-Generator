@@ -2,6 +2,7 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
 var gMarkDown = require("./utils/generateMarkdown.js");
+const { Console } = require("console");
 
 // array of questions for user
 const questions = [
@@ -82,12 +83,16 @@ function writeToFile(fileName, data) {
         if (err)
             throw err;
     });
+
+    console.log("**************************************************");
+    console.log("******README Successfully Generated!!!************")
+    console.log("**************************************************");
 }
 
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then(function (response) {
-        console.log(response);
+        // console.log(response);
 
         const markDownResponse = gMarkDown.generateMarkdownFunction(response);
 
