@@ -40,7 +40,7 @@ const questions = [
             "The zlib/libpng License",
             "None"
         ],
-        name: "licence"
+        name: "license"
 
     },
     {
@@ -67,6 +67,12 @@ const questions = [
         name: "email"
 
     },
+    {
+        type: "input",
+        message: "Repository Name: ",
+        name: "repoName"
+
+    },
 ];
 
 // function to write README file
@@ -83,7 +89,7 @@ function init() {
     inquirer.prompt(questions).then(function (response) {
         console.log(response);
 
-        const markDownResponse = gMarkDown.generateMarkdownFunciton(response);
+        const markDownResponse = gMarkDown.generateMarkdownFunction(response);
 
         writeToFile("README-Generated.md", markDownResponse);
 
