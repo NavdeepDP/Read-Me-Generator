@@ -14,6 +14,11 @@ The link to the website repository: [Website Repo link](https://github.com/Navde
 - Run "node index.js" at the terminal prompt. User will be prompted to enter data for various sections in the Readme.
 - After entering all the data, Readme is generated and is stored in the root as "README-Generated.md".
 
+![Readme Image](./assets/images/Readme-Generated.png)
+
+
+![Readme Image](./assets/images/Readme-Generation.gif)
+
  
 ## Installation
 
